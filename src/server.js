@@ -26,6 +26,14 @@ app.get("/", (req,res)=>{
     res.render("index")
 })
 
+app.get("/noticias", (req,res)=>{
+    res.render("news")
+})
+
+app.get("/blogs", (req,res)=>{
+    res.render("blogs")
+})
+
 
 //Archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')))
