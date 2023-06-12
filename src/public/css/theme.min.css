@@ -112,7 +112,7 @@ h6 {
    margin-top: 0;
    margin-bottom: .5rem;
    font-weight: 500;
-   line-height: 1.2
+   line-height: 1.2;
 }
 
 .h1,
@@ -182,7 +182,7 @@ h5 {
 
 .h6,
 h6 {
-   font-size: 1.2rem
+   font-size: 2rem
 }
 
 p {
@@ -1405,6 +1405,9 @@ img {
    transition: all .5s ease-in-out 0s
 }
 
+a.etiqu{
+  color: antiquewhite; 
+}
 .bg-cover {
    background-size: cover;
    background-position: center center

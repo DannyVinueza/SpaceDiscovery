@@ -7,7 +7,7 @@ const axios = require('axios');
 const app = express()
 
 // Configuraciones
-app.set('port', process.env.port || 3000)
+app.set('port', process.env.port || 4000)
 app.set('views', path.join(__dirname, 'views'))
 app.engine('.hbs', engine({
   defaultLayout: 'main',
@@ -34,7 +34,7 @@ app.get('/noticias', async (req, res) => {
 
     // Obtener los datos de los artículos de la respuesta
     const articles = response.data;
-
+console.log(articles);
     res.render('news', { articles });
   } catch (error) {
     console.error('Error al obtener noticias:', error);
