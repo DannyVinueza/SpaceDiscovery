@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
 app.get('/noticias', async (req, res) => {
   try {
     // Realizar una solicitud a la API de Spaceflight News
-    const response = await axios.get('https://api.spaceflightnewsapi.net/v4/articles');
+    const response = await axios.get('https://api.spaceflightnewsapi.net/v3/articles');
 
     // Obtener los datos de los artículos de la respuesta
     const articles = response.data;
