@@ -27,10 +27,13 @@ app.get("/", async (req, res) => {
   try {
     // Realizar una solicitud a la API de Spaceflight News
     const response = await axios.get('https://api.spaceflightnewsapi.net/v3/reports');
+    const response_2 = await axios.get('https://api.spaceflightnewsapi.net/v3/articles');
 
     // Obtener los datos de los artículos de la respuesta
     const reports = response.data;
-    res.render('index', { reports });
+    const articles = response_2.data;
+
+    res.render('index', { reports, articles });
   } catch (error) {
     console.error('Error al obtener reports:', error);
     res.render('error'); // Renderizar una plantilla de error en caso de fallo
