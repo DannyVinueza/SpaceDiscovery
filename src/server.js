@@ -34,7 +34,6 @@ app.get('/noticias', async (req, res) => {
 
     // Obtener los datos de los artículos de la respuesta
     const articles = response.data;
-console.log(articles);
     res.render('news', { articles });
   } catch (error) {
     console.error('Error al obtener noticias:', error);
